@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">My Train App</string>
+    <string name="select_train">Select Berth</string>
+
+    <string-array name="berth">
+        <item>SL</item>
+        <item>3A</item>
+        <item>2A</item>
+        <item>1A</item>
+        <item>2S</item>
+        <item>CC</item>
+    </string-array>
+</resources>

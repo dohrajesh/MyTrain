@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="horizontal"
+android:layout_width="match_parent"
+android:layout_height="60dp"
+android:weightSum="4">
+
+<TextView
+    android:layout_width="0dp"
+    android:layout_height="60dp"
+    android:id="@+id/sl_no"
+    android:gravity="center"
+    android:layout_weight=".75" />
+
+<TextView
+    android:layout_width="0dp"
+    android:layout_height="60dp"
+    android:gravity="center"
+    android:id="@+id/passenger_name"
+    android:layout_weight="1.5" />
+
+<TextView
+    android:layout_width="0dp"
+    android:layout_height="60dp"
+    android:gravity="center"
+    android:id="@+id/age"
+    android:layout_weight=".75" />
+
+    <Spinner
+        android:id="@+id/berth_spinner"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:spinnerMode="dropdown" />
+</LinearLayout>

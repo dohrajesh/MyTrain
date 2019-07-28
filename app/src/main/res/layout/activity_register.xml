@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_image"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ActivityRegister">
+
+    <!--To put a colored layer  background -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-30dp"
+        android:alpha=".6"
+        android:background="#8BC34A" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/patua_one"
+        android:gravity="center"
+        android:text="Register"
+        android:textColor="#fff"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!--First Name-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/first_name_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:hint="First name"
+            android:textColorHint="#fff">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/first_name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#fff"
+                android:inputType="text"
+                android:textColor="#fff" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--Last Name-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/last_name_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Last name"
+            android:textColorHint="#fff"
+           >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/last_name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#fff"
+                android:inputType="text"
+                android:textColor="#fff" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--Email -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Email"
+            android:textColorHint="#fff"
+           >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#fff"
+                android:inputType="textEmailAddress"
+                android:textColor="#fff" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--Phone no-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phone_no_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Phone Number"
+            android:textColorHint="#fff"
+           >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone_no_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#fff"
+                android:inputType="phone"
+                android:textColor="#fff" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--For Password-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="1dp"
+            android:layout_marginTop="20dp"
+            android:hint="Password"
+            android:textColorHint="#fff"
+           >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="#fff"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Register"
+            android:id="@+id/register"
+            android:textSize="20sp"
+            android:background="@drawable/shape_round_textbox"
+            android:backgroundTint="#FF3342"
+            android:padding="10dp"
+            android:drawableRight="@drawable/ic_right_arrow_30"
+            android:layout_margin="20dp"/>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:fontFamily="@font/patua_one"
+    android:gravity="center"
+    android:text="By clicking register. I agree to your Terms."
+    android:textColor="#fff"
+    android:textSize="15sp"
+    />
+    </LinearLayout>
+
+
+</RelativeLayout>

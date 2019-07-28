@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "991730375966",
+    "firebase_url": "https://mytrainapp-55489.firebaseio.com",
+    "project_id": "mytrainapp-55489",
+    "storage_bucket": "mytrainapp-55489.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991730375966:android:0723e7b01f42679c",
+        "android_client_info": {
+          "package_name": "com.example.mytrainapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "991730375966-38ngg7gnuktkm3vh8l532it07h2a9jns.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mytrainapp",
+            "certificate_hash": "7ad00dcec4bf1c1dbb69af01c779e03177f5ecde"
+          }
+        },
+        {
+          "client_id": "991730375966-qnhsi33iq7lsk4me0i3qig9rtjktde3e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJfwvYj1te1KC8sbCFxBQKrQ-TbzhY1Bc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "991730375966-qnhsi33iq7lsk4me0i3qig9rtjktde3e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
