@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_image"
+    android:background="@drawable/train_track"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".ActivityTrainAppLogin">
@@ -24,30 +24,30 @@
         android:gravity="center"
         android:text="Indian Railways"
         android:textColor="#fff"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:textStyle="bold"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:gravity="center"
         android:layout_margin="20dp"
+        android:gravity="center"
         android:orientation="vertical">
-        <!--Email-->
+        <!--Mobile Number-->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/mobile_text_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Mobile Number"
-            android:textColorHint="#fff"
-            >
+            android:textColorHint="#fff">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/mobile_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#fff"
-                android:inputType="textEmailAddress"
+                android:inputType="phone"
                 android:textColor="#fff" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -58,12 +58,12 @@
             android:id="@+id/password_text_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="gone"
             android:layout_centerInParent="true"
             android:layout_marginTop="10dp"
             android:hint="Password"
-
             android:textColorHint="#fff"
+
+            android:visibility="gone"
             app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -77,25 +77,27 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/login_button"
             android:layout_width="200dp"
-            android:layout_height="50dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/shape_round_textbox"
             android:backgroundTint="#2E55D5"
-            android:textColor="#fff"
             android:text="Login"
-            android:background="@drawable/shape_round_textbox"/>
+            android:textColor="#fff"
+            android:textStyle="bold"/>
 
 
     </LinearLayout>
 
 
     <LinearLayout
+        android:id="@+id/linear"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="45dp"
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="55dp"
         android:background="@drawable/shape_round_textbox"
-        android:id="@+id/linear"
 
         android:weightSum="2">
 
@@ -104,39 +106,51 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#3433FF"
-            android:gravity="center"
             android:drawableLeft="@drawable/ic_fb"
+            android:gravity="center"
             android:paddingLeft="10dp"
             android:text="Facebook"
             android:textColor="#fff"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
 
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="#fff"/>
+            android:background="#fff" />
+
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#FF3342"
-            android:gravity="center"
-            android:text="Google"
             android:drawableLeft="@drawable/ic_google_24"
+            android:gravity="center"
             android:paddingLeft="10dp"
+            android:text="Google"
             android:textColor="#fff"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold"/>
     </LinearLayout>
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:onClick="onCreatYourAccount"
         android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:text="Create Now"
-        android:textColor="#fff"
-        android:textSize="20sp" />
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:drawableRight="@drawable/ic_forword"
+            android:gravity="center"
+            android:onClick="onCreatYourAccount"
+            android:text="Create Now  "
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
 
 </RelativeLayout>

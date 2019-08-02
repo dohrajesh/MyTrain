@@ -65,7 +65,7 @@ public class ActivityTrainAppLogin extends AppCompatActivity {
                                     progressDialog.dismiss();
 
                                     mobileNumberValue = mobileNumber.getText().toString();
-                                    Intent intent = new Intent(ActivityTrainAppLogin.this, ActivityProfileView.class);
+                                    Intent intent = new Intent(ActivityTrainAppLogin.this, NavigationDrawerActivity.class);
                                     startActivity(intent);
                                 }
 
@@ -100,9 +100,9 @@ public class ActivityTrainAppLogin extends AppCompatActivity {
         });
     }
 
-
+//on click of create now should go to registration page
     public void onCreatYourAccount(View view) {
-        startActivity(new Intent(ActivityTrainAppLogin.this, ActivityProfileView.class).putExtra("key", "1"));
+        startActivity(new Intent(ActivityTrainAppLogin.this, MapActivity.class).putExtra("key", "1"));
     }
 }
 

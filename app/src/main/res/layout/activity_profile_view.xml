@@ -8,6 +8,41 @@
     android:orientation="vertical"
     tools:context=".ActivityProfileView">
 
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="#000"
+        android:layout_height="60dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_back"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Edit Profile"
+                android:textColor="#fff"
+                android:textSize="20sp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_three_hori_dots"
+                android:paddingEnd="10dp"
+                />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="250dp"
@@ -71,7 +106,7 @@
                 android:singleLine="true"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:paddingEnd="10dp"
+                android:paddingLeft="10dp"
                 android:id="@+id/email_in_profile"/>
 
         </LinearLayout>

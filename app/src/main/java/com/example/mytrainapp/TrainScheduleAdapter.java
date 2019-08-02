@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -42,6 +43,17 @@ public class TrainScheduleAdapter extends RecyclerView.Adapter<TrainScheduleAdap
         holder.depTime.setText(trainschedulemodel.get(position).getDep());
         holder.arrTime.setText(trainschedulemodel.get(position).getArr());
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (holder.bottomLayout.getVisibility() == View.GONE)
+                    holder.bottomLayout.setVisibility(View.VISIBLE);
+                else
+                    holder.bottomLayout.setVisibility(View.GONE);
+
+            }
+        });
+
 
 
     }
@@ -59,12 +71,14 @@ public class TrainScheduleAdapter extends RecyclerView.Adapter<TrainScheduleAdap
 
 
         TextView slNo, name, depTime, arrTime;
+        LinearLayout bottomLayout;
         public ProductHolder(@NonNull View itemView) {
             super(itemView);
             slNo = itemView.findViewById(R.id.sl_no);
             name = itemView.findViewById(R.id.train_name);
             depTime = itemView.findViewById(R.id.departure_time);
             arrTime = itemView.findViewById(R.id.arrival_time);
+            bottomLayout = itemView.findViewById(R.id.bottom_linear);
 
         }
     }

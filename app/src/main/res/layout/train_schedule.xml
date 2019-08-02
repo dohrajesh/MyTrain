@@ -1,36 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--Single Row layout-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="60dp"
-    android:weightSum="4">
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    >
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:id="@+id/sl_no"
-            android:gravity="center"
-            android:layout_weight="1"
-            />
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:gravity="center"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="4"
+            android:layout_height="wrap_content">
 
-            android:id="@+id/train_name"
-            android:layout_weight="1"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:gravity="center"
 
-            android:id="@+id/departure_time"
-            android:layout_weight="1"/>
-        <TextView
-            android:layout_width="0dp"
-            android:gravity="center"
-            android:layout_height="60dp"
-            android:id="@+id/arrival_time"
-            android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/sl_no"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+
+                    android:id="@+id/train_name"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+
+                    android:id="@+id/departure_time"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:layout_height="60dp"
+                    android:id="@+id/arrival_time"
+                    android:layout_weight="1"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_linear"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="siojd0idj09IHD09uaidh"/>
+        </LinearLayout>
+
+
 </LinearLayout>
