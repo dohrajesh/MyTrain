@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ActivityTrainSearch">
-    
+
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
-        android:background="#000"
-        android:layout_height="60dp">
+        android:layout_height="60dp"
+        android:background="#000">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -20,23 +20,24 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="20dp"
-                android:src="@drawable/ic_back"
-                android:layout_centerVertical="true"/>
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_back" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="Book Ticket"
+                android:text="Search Train"
                 android:textColor="#fff"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
                 android:layout_alignParentEnd="true"
-                android:src="@drawable/ic_three_hori_dots"
+                android:layout_centerVertical="true"
                 android:paddingEnd="10dp"
-                />
+                android:src="@drawable/ic_three_hori_dots" />
 
         </RelativeLayout>
 
@@ -51,9 +52,10 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="10dp"
             android:layout_weight="0.40"
-            android:text="From" />
+            android:text="From"
+            android:textStyle="bold" />
 
         <EditText
             android:layout_width="0dp"
@@ -72,9 +74,10 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="10dp"
             android:layout_weight="0.40"
-            android:text="To" />
+            android:text="To"
+            android:textStyle="bold" />
 
         <EditText
             android:layout_width="0dp"
@@ -93,9 +96,10 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="10dp"
             android:layout_weight=".6"
-            android:text="Date" />
+            android:text="Date"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/date_selector"
@@ -116,8 +120,31 @@
             android:layout_weight=".25"
             android:background="@drawable/ic_calendar" />
 
+
     </LinearLayout>
-    <!--Adding Elegant number button-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/login_button"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:background="@drawable/shape_round_textbox"
+            android:backgroundTint="#2E55D5"
+            android:drawableRight="@drawable/ic_right_white_arrow_icon"
+            android:paddingRight="25dp"
+            android:text="Search"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:onClick="bookTicket"/>
+
+    </LinearLayout>
+
+
+    <!--&lt;!&ndash;Adding Elegant number button&ndash;&gt;-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -126,12 +153,11 @@
 
         <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
             android:id="@+id/elegant_number_button"
+            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="1dp"
-            app:finalNumber="100"
-
-            />
+            app:finalNumber="100" />
 
     </RelativeLayout>
 </LinearLayout>

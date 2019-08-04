@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mytrainapp">
-
+    <!-- for internet permission -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- for live location permission but still we need to give permission in java runtime -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,10 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MapActivity"></activity>
+        <activity android:name=".ActivityLiveStatus"></activity>
+        <activity android:name=".ActivityPNRStatus" />
+        <activity android:name=".MapActivity" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBJfwvYj1te1KC8sbCFxBQKrQ-TbzhY1Bc"/>
+            android:value="AIzaSyBJfwvYj1te1KC8sbCFxBQKrQ-TbzhY1Bc" />
+
         <activity
             android:name=".NavigationDrawerActivity"
             android:label="@string/title_activity_navigation_drawer"

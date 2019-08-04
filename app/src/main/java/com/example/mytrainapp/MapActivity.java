@@ -32,22 +32,25 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Sydney, Australia, and move the camera.
+        // Add a marker in Bangalore, India, and move the camera.
 
-        LatLng sydney = new LatLng(12.9716, 77.5946);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    Activity#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for Activity#requestPermissions for more details.
-            mMap.setMyLocationEnabled(true);
+        LatLng bangalore = new LatLng(12.9716, 77.5946);//setting for bangalore
+        mMap.addMarker(new MarkerOptions().position(bangalore).title("Marker in Sydney"));
 
-            return;
-        }
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 15f));
+        //below code is for live location finding, for this we need run time permissions.
+//        if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+//            // TODO: Consider calling
+//            //    Activity#requestPermissions
+//            // here to request the missing permissions, and then overriding
+//            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+//            //                                          int[] grantResults)
+//            // to handle the case where the user grants the permission. See the documentation
+//            // for Activity#requestPermissions for more details.
+//            mMap.setMyLocationEnabled(true);
+//
+//            return;
+//        }
+        //focus the camera on that marker
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(bangalore, 15f));
     }
 }

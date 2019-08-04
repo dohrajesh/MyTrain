@@ -95,14 +95,23 @@ public class NavigationDrawerActivity extends AppCompatActivity
 //            fm.beginTransaction().replace(R.id.container, new HomeFragment()).commit();
             // Handle the camera action
         } else if (id == R.id.nav_profile) {
+            startActivity(new Intent(NavigationDrawerActivity.this, ActivityProfileView.class).putExtra("key", "1"));
 
-        } else if (id == R.id.nav_my_bookings) {
+        } else if (id == R.id.nav_search_train) {
+            startActivity(new Intent(NavigationDrawerActivity.this, ActivityTrainSearch.class).putExtra("key", "1"));
 
-        } else if (id == R.id.nav_cancel_tickets) {
+        } else if (id == R.id.nav_pnr_status) {
+            startActivity(new Intent(NavigationDrawerActivity.this, ActivityPNRStatus.class).putExtra("key", "1"));
+
+        }else if (id == R.id.nav_live_status) {
+            startActivity(new Intent(NavigationDrawerActivity.this, ActivityLiveStatus.class).putExtra("key", "1"));
 
         }else if (id == R.id.nav_about_us) {
 
         }else if (id == R.id.logout) {
+            finish();//which will stop the activity and if we want the login page below line will open login page
+            startActivity(new Intent(NavigationDrawerActivity.this, ActivityTrainAppLogin.class).putExtra("key", "1"));
+
 
         } else if (id == R.id.nav_share) {
 

@@ -3,6 +3,7 @@ package com.example.mytrainapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CalendarView;
@@ -29,7 +30,7 @@ public class ActivityTrainSearch extends AppCompatActivity {
         date = findViewById(R.id.date_selector);
         dialog = findViewById(R.id.date_dialog);
 
-            //instance of calendar
+        //instance of calendar
         Calendar calendar = Calendar.getInstance();
 
         dialog.setOnClickListener(new View.OnClickListener() {
@@ -39,7 +40,7 @@ public class ActivityTrainSearch extends AppCompatActivity {
                 DatePickerDialog datePickerDialog = new DatePickerDialog(ActivityTrainSearch.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
-                    //sending selected date to the edit text
+                        //sending selected date to the edit text
                         date.setText(i2 + "/" + (i1 + 1) + "/" + i);
                         Toast.makeText(ActivityTrainSearch.this, i2 + "-" + (i1 + 1) + "-" + i, Toast.LENGTH_SHORT).show();
 
@@ -50,6 +51,11 @@ public class ActivityTrainSearch extends AppCompatActivity {
                 datePickerDialog.show();
             }
         });
+
+    }
+
+    public void bookTicket(View view) {
+        startActivity(new Intent(ActivityTrainSearch.this, ActivityBookTicket.class).putExtra("key", "1"));
 
     }
 

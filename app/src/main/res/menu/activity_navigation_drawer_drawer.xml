@@ -13,17 +13,18 @@
             android:icon="@drawable/ic_profile_icon"
             android:title="Profile" />
         <item
-            android:id="@+id/nav_my_bookings"
-            android:icon="@drawable/ic_calendor_icon"
-            android:title="My Bookings" />
+            android:id="@+id/nav_search_train"
+            android:icon="@drawable/ic_search"
+            android:title="Search Train" />
         <item
-            android:id="@+id/nav_cancel_tickets"
-            android:icon="@drawable/ic_cancel_icon"
-            android:title="Cancel Tickets" />
+            android:id="@+id/nav_pnr_status"
+            android:icon="@drawable/ic_pnr_status"
+            android:title="PNR Status" />
         <item
-            android:id="@+id/nav_about_us"
-            android:icon="@drawable/ic_about_us"
-            android:title="About Us" />
+            android:id="@+id/nav_live_status"
+            android:icon="@drawable/ic_train"
+            android:title="Live Status" />
+
         <item
             android:id="@+id/logout"
             android:icon="@drawable/ic_logout"
@@ -41,6 +42,10 @@
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
                 android:title="@string/menu_send" />
+            <item
+                android:id="@+id/nav_about_us"
+                android:icon="@drawable/ic_about_us"
+                android:title="About Us" />
 
 
 

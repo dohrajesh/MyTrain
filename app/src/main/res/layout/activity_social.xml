@@ -45,14 +45,14 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="250dp"
         android:background="@drawable/train_image">
 
     </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="115dp"
+        android:layout_height="130dp"
         android:padding="5dp"
         android:weightSum="3">
 
@@ -132,7 +132,7 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="115dp"
+        android:layout_height="130dp"
         android:padding="5dp"
         android:weightSum="3">
 

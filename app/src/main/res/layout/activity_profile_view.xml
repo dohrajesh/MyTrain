@@ -10,8 +10,8 @@
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
-        android:background="#000"
-        android:layout_height="60dp">
+        android:layout_height="60dp"
+        android:background="#000">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -21,23 +21,24 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="20dp"
-                android:src="@drawable/ic_back"
-                android:layout_centerVertical="true"/>
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_back" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:text="Edit Profile"
                 android:textColor="#fff"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
                 android:layout_alignParentEnd="true"
-                android:src="@drawable/ic_three_hori_dots"
+                android:layout_centerVertical="true"
                 android:paddingEnd="10dp"
-                />
+                android:src="@drawable/ic_three_hori_dots" />
 
         </RelativeLayout>
 
@@ -45,7 +46,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="150dp"
         android:background="@drawable/background_image">
 
         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -54,7 +55,7 @@
             android:layout_height="120dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="20dp"
-            android:src="@drawable/profile_image"
+            android:src="@drawable/vijay_profile_pic"
             app:civ_border_color="#fff"
             app:civ_border_width="2dp" />
 
@@ -68,286 +69,300 @@
             android:fontFamily="sans-serif-condensed"
             android:text="Change Image  "
             android:textColor="#fff"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
     </RelativeLayout>
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <LinearLayout
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal"
-            android:weightSum="2">
-            <!--Email-->
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:paddingLeft="10dp"
-                android:text="Email"
-                />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:gravity="end|center_vertical"
-                android:inputType="textEmailAddress"
-                android:fadingEdgeLength="100dp"
-                android:ellipsize="none"
-                android:maxEms="15"
-                android:text="dohrarajesh@gmail.com"
-                android:singleLine="true"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:paddingLeft="10dp"
-                android:id="@+id/email_in_profile"/>
-
-        </LinearLayout>
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <View
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <!--Email-->
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Email" />
+
+                <TextView
+                    android:id="@+id/email_in_profile"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1.5"
+                    android:ellipsize="none"
+                    android:fadingEdgeLength="50dp"
+                    android:gravity="end|center_vertical"
+                    android:inputType="textEmailAddress"
+                    android:maxEms="15"
+                    android:singleLine="true"
+                    android:text="dohrarajesh@gmail.com"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#000" />
+                android:orientation="horizontal">
 
-        </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#000" />
+
+            </LinearLayout>
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal"
-            android:weightSum="2">
-            <!--Password-->
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:paddingLeft="10dp"
-                android:text="Password" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <!--Password-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Password" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="end"
-                android:paddingEnd="10dp"
-                android:text=".........."
-                android:textSize="30sp"
-                android:textStyle="bold"
-                android:id="@+id/password_in_profile"
-                />
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/password_in_profile"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:gravity="end|center_vertical"
+                    android:text=".........."
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <View
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#000" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <!--Remember me-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Remember me " />
+
+                <Switch
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:textOff="OFF"
+                    android:textOn="ON" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#000" />
+                android:orientation="horizontal">
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#000" />
 
-        </LinearLayout>
+            </LinearLayout>
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal"
-            android:weightSum="2">
-            <!--Remember me-->
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:paddingLeft="10dp"
-                android:text="Remember me " />
-
-            <Switch
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textOff="OFF"
-                android:textOn="ON"
-                android:paddingEnd="10dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:orientation="horizontal">
-
-            <View
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#000" />
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <!--Name-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Name" />
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/name_in_profile"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:gravity="end|center_vertical"
+                    android:inputType="text"
+                    android:text="Rajesh"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal"
-            android:weightSum="2">
-            <!--Name-->
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:paddingLeft="10dp"
-                android:text="Name" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:inputType="text"
-                android:gravity="end|center_vertical"
-                android:paddingEnd="10dp"
-                android:text="Rajesh"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:id="@+id/name_in_profile"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:orientation="horizontal">
-
-            <View
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#000" />
+                android:orientation="horizontal">
 
-        </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#000" />
+
+            </LinearLayout>
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal"
-            android:weightSum="2">
-            <!--Phone-->
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:paddingLeft="10dp"
-                android:text="Phone No" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <!--Phone-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Phone No" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="end|center_vertical"
-                android:inputType="phone"
-                android:paddingEnd="10dp"
-                android:text="8884901188"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:id="@+id/phone_in_profile"/>
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/phone_in_profile"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:gravity="end|center_vertical"
+                    android:inputType="phone"
+                    android:text="8884901188"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:orientation="horizontal">
-
-            <View
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#000" />
+                android:orientation="horizontal">
 
-        </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#000" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal"
-            android:weightSum="2">
-            <!--Address-->
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:paddingLeft="10dp"
-                android:text="Address" />
+            </LinearLayout>
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="end|center_vertical"
-                android:inputType="textEmailAddress"
-                android:paddingEnd="10dp"
-                android:text="Kothanur Bangalore-77"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:id="@+id/address_in_profile"/>
-        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <!--Address-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Address" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/address_in_profile"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:gravity="end|center_vertical"
+                    android:inputType="textEmailAddress"
+                    android:text="Kothanur Bangalore-77"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
-            <View
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#000" />
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#000" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <!--Pan card-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="PAN Card" />
+
+                <TextView
+                    android:id="@+id/pan_in_profile"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:gravity="end|center_vertical"
+                    android:text="1AU12ME025"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#000" />
+
+            </LinearLayout>
 
         </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal"
-            android:weightSum="2">
-            <!--Pan card-->
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:paddingLeft="10dp"
-                android:text="PAN Card" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="end|center_vertical"
-                android:paddingEnd="10dp"
-                android:text="1AU12ME025"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:id="@+id/pan_in_profile"/>
-        </LinearLayout>
-
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
 
 
 </LinearLayout>
