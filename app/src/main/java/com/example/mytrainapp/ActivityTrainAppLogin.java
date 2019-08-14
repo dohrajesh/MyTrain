@@ -25,7 +25,7 @@ public class ActivityTrainAppLogin extends AppCompatActivity {
     Button loginButton;
     public static String mobileNumberValue = "";
 
-    //API key for comunicating to the server making it as static cause we are using every where in our network calls
+    //API key for communicating to the server making it as static cause we are using every where in our network calls
     public static String API_KEY = "975c8ae5a256ffeda9845796b549bd26";
     EditText mobileNumber;
 

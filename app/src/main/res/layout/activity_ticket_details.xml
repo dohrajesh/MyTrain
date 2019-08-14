@@ -128,7 +128,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#F7074F"
-            android:drawableRight="@drawable/ic_right_arrow_30"
+            android:drawableRight="@drawable/ic_right_white_arrow_icon"
             android:background="@drawable/shape_round_textbox"
             android:text=" Payment"
             android:elevation="10dp"

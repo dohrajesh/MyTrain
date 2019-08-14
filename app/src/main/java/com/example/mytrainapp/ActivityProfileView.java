@@ -30,6 +30,7 @@ public class ActivityProfileView extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
 
+
                 //mapping the data snapshot to the UserDetails
                 UserDetails userDetails = dataSnapshot.getValue(UserDetails.class);
 

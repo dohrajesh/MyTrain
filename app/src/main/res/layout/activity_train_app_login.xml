@@ -39,6 +39,7 @@
             android:id="@+id/mobile_text_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:hint="Mobile Number"
             android:textColorHint="#fff">
 
@@ -48,7 +49,8 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="#fff"
                 android:inputType="phone"
-                android:textColor="#fff" />
+                android:textColor="#fff"
+                android:textStyle="bold"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 

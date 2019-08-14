@@ -34,17 +34,21 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
     //material design library AndroidX (snakbar, tablayout, toolbar and viewpager
     implementation 'com.google.android.material:material:1.1.0-alpha08'
 
+
+    //For google map
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
 
 
     //For circular image view  => library
     implementation 'de.hdodenhof:circleimageview:3.0.0'
 
-//For Elegant button
+    //For Elegant button
     implementation 'com.cepheuen.elegant-number-button:lib:1.0.2'
-//for networking library
+
+    //for networking library i.e for getting data from the server through API's
     implementation 'com.squareup.okhttp3:okhttp:4.0.1'
 }

@@ -27,53 +27,56 @@ public class ActivityPNRStatus extends AppCompatActivity {
     Button search;
     String pnrNumber;
     TextView name, number, from, to, date;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pnr_status);
         //Casting edit text PNR
-      pnr=findViewById(R.id.pnr_num);
-      search=findViewById(R.id.search_button);
+        pnr = findViewById(R.id.pnr_num);
+        search = findViewById(R.id.search_button);
 
-      //Casting name num from to and date from xml
-      name=findViewById(R.id.train_name_id);
-      number=findViewById(R.id.train_no_id);
-      from=findViewById(R.id.trin_from_id);
-      to=findViewById(R.id.train_to_id);
-      date=findViewById(R.id.train_jourey_id);
+        //Casting name num from to and date from xml
+        name = findViewById(R.id.train_name_id);
+        number = findViewById(R.id.train_no_id);
+        from = findViewById(R.id.trin_from_id);
+        to = findViewById(R.id.train_to_id);
+        date = findViewById(R.id.train_jourey_id);
 
-      //Getting the pnr number and storing to pass into searchPNR class
-      search.setOnClickListener(new View.OnClickListener() {
-          @Override
-          public void onClick(View view) {
-              pnrNumber = pnr.getText().toString();
-             //To call the backgroung thread i.e. SearchPNR class
-              new SearchPNR().execute();
-          }
-      });
+        //Getting the pnr number and storing to pass into searchPNR class
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                pnrNumber = pnr.getText().toString();
+                //To call the backgroung thread i.e. SearchPNR class
+                new SearchPNR().execute();
+            }
+        });
 
     }
+
     class SearchPNR extends AsyncTask<Void, Void, String> {
 
         @Override
         protected String doInBackground(Void... voids) {
             OkHttpClient client = new OkHttpClient();
 
+            //to debug we have used Log.e==> its like printing this to know that these lines got executed
+            Log.e("url", "https://indianrailapi.com/api/v2/PNRCheck/apikey/" + API_KEY + "/PNRNumber/" + pnrNumber + "/Route/1/");
 
-            Log.e("url", "https://indianrailapi.com/api/v2/PNRCheck/apikey/" +API_KEY +"/PNRNumber/"+pnrNumber+"/Route/1/");
-                Request request = new Request.Builder()
-                        .url("https://indianrailapi.com/api/v2/PNRCheck/apikey/" +API_KEY +"/PNRNumber/"+pnrNumber+"/Route/1/")
-                        .build();
+            Request request = new Request.Builder()
+                    .url("https://indianrailapi.com/api/v2/PNRCheck/apikey/" + API_KEY + "/PNRNumber/" + pnrNumber + "/Route/1/")
+                    .build();
 
-                try (Response response = client.newCall(request).execute()) {
+            try (Response response = client.newCall(request).execute()) {
 
-                    //write here for returning the data from back thread to reflect in the UI
+                //write here for returning the data from back thread to reflect in the UI
 
 
-                    return response.body().string();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                return response.body().string();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
             return "";
         }
